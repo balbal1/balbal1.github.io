@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Board</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="CursedTimerUlil-Aznm.ttf">
+</head>
+<body>
+
+    <div class="screen">
+        <div class="score">
+            <p class="name">HOME</p>
+            <div class="number"><p ID="home">0</p></div>
+            <div class="buttons">
+                <div class="increment" onclick="add1Home()">+1</div>
+                <div class="increment" onclick="add2Home()">+2</div>
+                <div class="increment" onclick="add3Home()">+3</div>
+            </div>
+        </div>
+        <div class="reset" onclick="reset()">RESET</div>
+        <div class="score">
+            <p class="name">GUEST</p>
+            <div class="number"><p ID="guest">0</p></div>
+            <div class="buttons">
+                <div class="increment" onclick="add1Guest()">+1</div>
+                <div class="increment" onclick="add2Guest()">+2</div>
+                <div class="increment" onclick="add3Guest()">+3</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
