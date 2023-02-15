@@ -4,34 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Score Board</title>
+    <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="CursedTimerUlil-Aznm.ttf">
 </head>
 <body>
-
-    <div class="screen">
-        <div class="score">
-            <p class="name">HOME</p>
-            <div class="number"><p ID="home">0</p></div>
-            <div class="buttons">
-                <div class="increment" onclick="add1Home()">+1</div>
-                <div class="increment" onclick="add2Home()">+2</div>
-                <div class="increment" onclick="add3Home()">+3</div>
-            </div>
+    <h1>Contact List</h1>
+    <div class="container">
+        <div class="input">
+            <form name="myForm" onsubmit="return false" autocomplete="off">
+                <div id="item1">
+                    <img src="Name.png">
+                    <input name="name" type="text" required placeholder="Name">
+                </div>
+                <div id="item2">
+                    <img src="Phone.png">
+                    <input name="phone" type="text" required placeholder="Phone">
+                </div>
+                <div id="item3">
+                    <input type="submit" value="Add Contact" onclick="addContact()">
+                </div>
+            </form>
         </div>
-        <div class="reset" onclick="reset()">RESET</div>
-        <div class="score">
-            <p class="name">GUEST</p>
-            <div class="number"><p ID="guest">0</p></div>
-            <div class="buttons">
-                <div class="increment" onclick="add1Guest()">+1</div>
-                <div class="increment" onclick="add2Guest()">+2</div>
-                <div class="increment" onclick="add3Guest()">+3</div>
+        <div class="contacts">
+            <div class="empty">
+                <p>No Contacts Yet</p>
             </div>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

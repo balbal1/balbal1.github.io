@@ -1,27 +1,43 @@
+let container = document.getElementsByClassName('contacts')[0];
+let empty = document.getElementsByClassName('empty')[0]
 
-let home = document.getElementById('home');
-let guest = document.getElementById('guest');
+let addContact = function() {
+    if (document.forms["myForm"]["name"].value == "" || document.forms["myForm"]["phone"].value == "") {
+        return;
+    }
+    empty.style.display = 'none';
+    
+    let contact = document.createElement('div');
+    let name = document.createElement('p');
+    let phone = document.createElement('p');
+    let close = document.createElement('div');
+    
+    contact.setAttribute("class", "contact");
+    close.setAttribute("class", "close");
+    
+    n = document.getElementsByClassName('contact').length
+    close.setAttribute("onclick", "deleteContact("+n+")")
+    close.innerText = "X";
+    
+    name.innerText = document.forms["myForm"]["name"].value;
+    phone.innerText = document.forms["myForm"]["phone"].value;
+    
+    contact.appendChild(name);
+    contact.appendChild(phone);
+    contact.appendChild(close);
+    container.appendChild(contact);
+}
 
-let add1Home = function() {
-    home.innerHTML = parseInt(home.innerHTML) + 1;
-}
-let add2Home = function() {
-    home.innerHTML = parseInt(home.innerHTML) + 2;
-}
-let add3Home = function() {
-    home.innerHTML = parseInt(home.innerHTML) + 3;
-}
-let add1Guest = function() {
-    guest.innerHTML = parseInt(guest.innerHTML) + 1;
-}
-let add2Guest = function() {
-    guest.innerHTML = parseInt(guest.innerHTML) + 2;
-}
-let add3Guest = function() {
-    guest.innerHTML = parseInt(guest.innerHTML) + 3;
-}
+let deleteContact = function(i) {
+    let contacts = document.getElementsByClassName('contact');
+    contacts[i].remove();
 
-let reset = function() {
-    home.innerHTML = 0;
-    guest.innerHTML = 0;
+    contacts = document.getElementsByClassName('contact');
+    for (i = 0; i < contacts.length; i++) {
+        contacts[i].children[2].setAttribute("onclick", "deleteContact("+i+")")
+    }
+
+    if (i == 0) {
+        empty.style.display = 'inline-block';
+    }
 }
