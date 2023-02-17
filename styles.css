@@ -99,7 +99,7 @@ input[type="submit"]:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     margin: 15px auto;
     max-width: 600px;
     padding: 5px 0;
@@ -113,8 +113,8 @@ input[type="submit"]:hover {
     padding: 0 70px 0 30px;
     justify-content: space-between;
     align-items: center;
-    margin: 5px 0;
-    width: 78%;
+    margin: 5px 10px;
+    /* width: 100%; */
     border-radius: 15px;
     background-color: #e4b074;
     color: #4b3629;
@@ -148,10 +148,27 @@ input[type="submit"]:hover {
 }
 
 .empty {
+    display: flex;
+    justify-content: center;
     font-size: 24px;
     font-weight: 700;
     color: #4b3629;
+    padding: 0 10px;
 }
 .empty p {
     margin: 17px 0;
+}
+
+@media (max-width:600px) {
+    form {
+        grid-template-columns: 195px 150px;
+        padding-left: 35px;
+    }
+    input[type="text"] {
+        width: 135px;
+    }
+    input[type="submit"] {
+        width: 75px;
+        font-size: 14px;
+    }
 }
