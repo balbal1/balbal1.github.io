@@ -38,6 +38,6 @@ let deleteContact = function(i) {
     }
 
     if (i == 0) {
-        empty.style.display = 'inline-block';
+        empty.style.display = 'flex';
     }
 }
