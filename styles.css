@@ -30,10 +30,11 @@ h1 {
 
 form {
     display: grid;
-    grid-template-columns: 260px 200px;
+    justify-content: space-evenly;
+    grid-template-columns: 260px 100px;
     grid-template-rows: 1fr 1fr;
     height: 100px;
-    padding-left: 50px;
+    width: 100%;
 }
 form div {
     display: flex;
@@ -87,7 +88,6 @@ input[type="submit"] {
     font-size: 16px;
     font-weight: 600;
     white-space: normal;
-    width: 100px;
     height: 60px;
     cursor: pointer;
 }
@@ -161,14 +161,19 @@ input[type="submit"]:hover {
 
 @media (max-width:600px) {
     form {
-        grid-template-columns: 195px 150px;
-        padding-left: 35px;
+        grid-template-columns: 195px 90px;
     }
     input[type="text"] {
         width: 135px;
     }
-    input[type="submit"] {
-        width: 75px;
+    input {
         font-size: 14px;
+    }
+    .contact p {
+        font-size: 20px;
+        font-family: Verdana;
+    }
+    .empty p {
+        margin: 13px 0;
     }
 }
