@@ -176,4 +176,7 @@ input[type="submit"]:hover {
     .empty p {
         margin: 13px 0;
     }
+    .contact {
+        padding: 0 35px 0 15px;
+    }
 }
