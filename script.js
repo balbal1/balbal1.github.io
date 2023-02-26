@@ -37,7 +37,7 @@ let RBS = function(symbol) {
 }
 
 let motion = function(me, cpu, msg, W) {
-    container.style.flexDirection = "row";
+    container.style.flexDirection = "";
     nam.innerHTML = '<p class="nam nam1">CPU</p><p class="nam vs">VS</p><p class="nam nam2">YOU</p>';
 
     for (let button of buttons) {
