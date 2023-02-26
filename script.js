@@ -37,7 +37,7 @@ let RBS = function(symbol) {
 }
 
 let motion = function(me, cpu, msg, W) {
-    container.style.flexDirection = "";
+    container.style.flexDirection = "row";
     nam.innerHTML = '<p class="nam nam1">CPU</p><p class="nam vs">VS</p><p class="nam nam2">YOU</p>';
 
     for (let button of buttons) {
@@ -69,7 +69,7 @@ let motion = function(me, cpu, msg, W) {
 }
 
 let resetRBS = function() {
-    container.style.flexDirection = "column";
+    container.style.flexDirection = "";
     container.children[0].remove();
     nam.innerHTML = "<p class='nam'>Choose a Pose</p>";
     after.style.display = "none";
