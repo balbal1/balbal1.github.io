@@ -142,6 +142,7 @@ let XO = function(row, column) {
         after.children[0].innerText = letter + " Won!!";
         after.children[0].classList.add("nm");
         after.style.display = "flex";
+        return;
     }
     if (played.length == 9) {
         end = true;
