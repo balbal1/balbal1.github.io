@@ -259,5 +259,6 @@ body {
     }
     .turn {
         width: 80%;
+        max-width: 280px;
     }
 }
